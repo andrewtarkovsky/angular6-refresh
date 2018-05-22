@@ -1,0 +1,5 @@
+<h2
+        [ngStyle]="{backgroundColor: getColor()}"
+        [ngClass]="{'online': server.status === 'Online'}">
+  Server {{server.name}} [{{server.id}}] is {{server.status}}
+</h2>

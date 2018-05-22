@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+    timerValue: number;
+
+    onTickReceived(tickData) {
+      this.timerValue = tickData.timerValue;
+      console.log(this.timerValue);
+    }
 }

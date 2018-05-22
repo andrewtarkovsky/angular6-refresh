@@ -1,0 +1,15 @@
+<app-server-edit (serverCreated)="onServerCreated($event)">Hello inner ng-content! <p #passedRef>I'm always here for you!</p></app-server-edit>
+<div class="row">
+  <h1 #uo_header>Unoperable Servers</h1>
+  <div class="col-xs-12">
+    <app-server *ngFor="let server of servers"></app-server>
+  </div>
+</div>
+<div class="row">
+  <h1>Operable servers</h1>
+  <div class="col-xs-12">
+    <app-operable-server *ngFor="let server of operableServers" [server]="server"></app-operable-server>
+  </div>
+</div>
+<app-success-alert></app-success-alert>
+<app-warning-alert></app-warning-alert>

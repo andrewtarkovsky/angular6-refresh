@@ -1,0 +1,9 @@
+<button (click)="toggleShow()">Show/hide</button>
+<p *ngIf="show">Password: {{theword}}</p>
+
+<ul>
+  <li *ngFor="let click of clicks"
+    [ngClass]="{'toomanyclicks': click > 4}">
+    Click...
+  </li>
+</ul>

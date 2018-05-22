@@ -1,0 +1,9 @@
+<input type="text" [(ngModel)]="serverName"/>
+<input type="text" value="Online" #serverStatusInput>
+<p>{{serverName}}</p>
+<button class="btn btn-success" [disabled]="!allowNewServer || !serverName.length" (click)="onCreateServer()">Add Server</button>
+<p [innerText]="serverCreationStatus" *ngIf="serverCreated; else noServer"></p>
+<ng-template #noServer>
+  <p>No server was created</p>
+</ng-template>
+<ng-content></ng-content>
